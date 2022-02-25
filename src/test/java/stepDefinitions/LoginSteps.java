@@ -49,7 +49,6 @@ public class LoginSteps {
 		String actualErrorText = signInPage.invalidSignInError.getText();
 
 		assertEquals(DataFactory.signInExpectedErrorText, actualErrorText);
-	
 	}
 	
 	
