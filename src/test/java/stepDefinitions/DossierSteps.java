@@ -145,6 +145,7 @@ public class DossierSteps {
 		@When("user clicks on one of the movie dossiers")
 		public void user_clicks_on_one_of_the_movie_dossiers() {
 			
+			wait.until(ExpectedConditions.visibilityOf(homePage.homePageFirstMovieViewDossierButton));
 			homePage.homePageFirstMovieViewDossierButton.click();
 			wait.until(ExpectedConditions.visibilityOf(dossierPage.dossierPageMovieTitle));
 		}

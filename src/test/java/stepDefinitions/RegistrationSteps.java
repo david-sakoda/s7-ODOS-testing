@@ -125,12 +125,13 @@ public class RegistrationSteps {
 	public void system_should_display_the_belonging_error_for_the_invalid_registration_information() {
 		
 		String actualError = registrationPage.registrationPageRegistrationError.getText();
-		
+		String expectedFullError = "Please specify first name.Please specify last name.Please specify email.Please specify password.";
 		String expectedFirstNameError = "Please specify first name.";
 		String expectedLastNameError = "Please specify last name.";
 		String expectedEmailError = "Please specify email.";
 		String expectedPasswordError = "Please specify password.";
 		
+		assertEquals(expectedFullError, actualError );
 		assertEquals(true, actualError.contains(expectedFirstNameError));
 		assertEquals(true, actualError.contains(expectedLastNameError));
 		assertEquals(true, actualError.contains(expectedEmailError));
