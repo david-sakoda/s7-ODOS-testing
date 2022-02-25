@@ -45,7 +45,6 @@ public class LoginSteps {
 	@Then("system should display invalid username or password error")
 	public void system_should_display_invalid_username_or_password_error() {
 		
-		
 		wait.until(ExpectedConditions.visibilityOf(signInPage.invalidSignInError));
 	
 		String actualErrorText = signInPage.invalidSignInError.getText();
