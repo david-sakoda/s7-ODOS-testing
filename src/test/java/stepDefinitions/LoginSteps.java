@@ -39,7 +39,6 @@ public class LoginSteps {
 	public void user_clicks_on_sign_in_button_from_sign_in_page() {
 		
 		signInPage.signInButton.click();
-		
 	}
 	
 	@Then("system should display invalid username or password error")
