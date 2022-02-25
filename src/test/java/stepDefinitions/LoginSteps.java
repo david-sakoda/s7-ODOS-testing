@@ -32,7 +32,6 @@ public class LoginSteps {
 		
 		signInPage.usernameInputBox.sendKeys(Encryption.Decoder(username));
 		signInPage.passwordInputBox.sendKeys(Encryption.Decoder(password));
-		
 	}
 
 	@When("user clicks on sign in button from sign in page")
