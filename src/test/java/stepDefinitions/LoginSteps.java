@@ -29,7 +29,6 @@ public class LoginSteps {
 
 	@When("^user enters (.*) and (.*)$")
 	public void user_enters_username_and_password(String username, String password) {
-		
 		signInPage.usernameInputBox.sendKeys(Encryption.Decoder(username));
 		signInPage.passwordInputBox.sendKeys(Encryption.Decoder(password));
 	}

@@ -47,6 +47,7 @@ public class LogoutSteps {
 		@When("user clicks logout button")
 		public void user_clicks_logout_button() {
 			
+			driver.switchTo().activeElement();
 			homePage.homePageLogoutButton.click();
 			
 		}

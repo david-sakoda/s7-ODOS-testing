@@ -33,11 +33,11 @@ public class HomePage {
 	@FindBy(xpath = "//*[contains (@class, 'MuiPaper-elevation1 MuiCard-root')][1]/div/div/button")
 	public WebElement homePageFirstMovieViewDossierButton;
 	
-	
-	
 	public By homePageDossiersLocator = By.xpath("//*[contains (@class, 'MuiPaper-elevation1 MuiCard-root')]");
 	
 	public String homePageDossiersLocatorText = "//*[contains (@class, 'MuiPaper-elevation1 MuiCard-root')]";
+	public String homePageIndividualDossierLocatorText = "(//*[contains (@class, 'MuiPaper-elevation1 MuiCard-root')])";
+	public String homePageViewDossierButtonLocatorText = "(//*[contains (@class, 'MuiPaper-elevation1 MuiCard-root')]/div/div/button[1])[";
 	
 	
 	

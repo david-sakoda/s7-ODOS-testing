@@ -11,6 +11,6 @@ public class DataFactory {
 	
 	public static String homePageExpectedHeaderText = "RetroPaper Movie Spider";
 	public static String signInExpectedErrorText = "Invalid username or password.";
-	public static Integer totalExpectedDossierCount = 5;
+	public static Integer totalExpectedDossierCount = 15;
 
 };

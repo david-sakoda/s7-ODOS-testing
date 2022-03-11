@@ -1,4 +1,4 @@
-@regression
+@regression @logout
 Feature: Test Logout Functionality
 
   Background: User is on the login page
@@ -15,5 +15,5 @@ Feature: Test Logout Functionality
     Then user is navigated to the login page
 
     Examples: 
-      | username                     | password             |
+      | username                     | password             | search text 
       | c2VsZW5pdW1AY3VjdW1iZXIuY29t | YXV0b21hdGlvbjEyMzQ= |

@@ -13,13 +13,17 @@ public class DossierPage {
 	@FindBy(xpath = "//div/div/main/div/div/h2")
 	public WebElement dossierPageMovieTitle;
 	
-	@FindBy(xpath = "//div/main/div/div/p[1]")
+	@FindBy(xpath = "//*[@id='description']/p[1]")
 	public WebElement dossierPageMoviePlot;
 	
 	@FindBy(xpath = "//*[contains(text(),'VIEW REPORT')]")
 	public WebElement dossierPageViewReportButton;
 	
 	public String dossierPageMovieDetailsContainer = "//*[contains(@class,'MuiTableRow-root')][";
+	
+	@FindBy(xpath = "//*[contains(@class,'MuiTableRow-root')][2]//td[2]")
+	public WebElement dossierPageMovieStarringInfo;
+	
 	
 //	@FindBy(xpath = "//*[contains (@class, 'MuiButton-outlined')]")
 //	public WebElement dossierPageBackButton;
