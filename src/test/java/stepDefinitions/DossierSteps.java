@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import dataFactory.DataFactory;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pageFactories.DossierPage;
@@ -35,8 +36,8 @@ public class DossierSteps {
 		
 		
 		
-		@Then("system should display five random dossiers")
-		public void system_should_display_five_random_dossiers() throws InterruptedException {
+		@And("system should display fifteen random dossiers")
+		public void system_should_display_fifteen_random_dossiers() {
 			
 			wait.until(ExpectedConditions.visibilityOf(homePage.homePageDossier));
 			
@@ -60,10 +61,10 @@ public class DossierSteps {
 			{
 				
 				int dossierIndex = i + 1;
-				String dossierMovieImageFinderText = homePage.homePageDossiersLocatorText + "[" + dossierIndex + "]/img";
-				String dossierMovieTitleFinderText = homePage.homePageDossiersLocatorText + "[" + dossierIndex + "]/div/div";
-				String dossierMoviePlotFinderText = homePage.homePageDossiersLocatorText + "[" + dossierIndex + "]/div/p";
-				String dossierViewDossierButtonFinderText = homePage.homePageDossiersLocatorText + "[" + dossierIndex + "]/div/div/button";
+				String dossierMovieImageFinderText = homePage.homePageIndividualDossierLocatorText + "[" + dossierIndex + "]/img";
+				String dossierMovieTitleFinderText = homePage.homePageIndividualDossierLocatorText + "[" + dossierIndex + "]/div/div";
+				String dossierMoviePlotFinderText = homePage.homePageIndividualDossierLocatorText + "[" + dossierIndex + "]/div/p";
+				String dossierViewDossierButtonFinderText = homePage.homePageIndividualDossierLocatorText + "[" + dossierIndex + "]/div/div/button[1]";
 				
 				boolean dossierMovieImageIsVisible = driver.findElement(By.xpath(dossierMovieImageFinderText)).isDisplayed();
 				boolean dossierMovieTitleIsVisible = driver.findElement(By.xpath(dossierMovieTitleFinderText)).isDisplayed();
@@ -95,8 +96,8 @@ public class DossierSteps {
 			for (int i = 0; i < actualTotalDossierCount; i++) {
 				
 				int dossierIndex = i + 1;
-				String dossierViewDossierButtonFinderText = homePage.homePageDossiersLocatorText + "[" + dossierIndex + "]/div/div/button";
-				String dossierMovieTitleFinderText = homePage.homePageDossiersLocatorText + "[" + dossierIndex + "]/div/div";
+				String dossierViewDossierButtonFinderText = homePage.homePageViewDossierButtonLocatorText + dossierIndex + "]";
+				String dossierMovieTitleFinderText = "(" + homePage.homePageDossiersLocatorText + ")[" + dossierIndex + "]/div/div";
 				
 				String movieTitleFromHomePageDossier = driver.findElement(By.xpath(dossierMovieTitleFinderText)).getText();
 				

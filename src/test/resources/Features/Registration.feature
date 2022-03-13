@@ -1,4 +1,4 @@
-@regression
+@regression @registration
 Feature: Test Registration Functionality
 
   Background: User is on the login page

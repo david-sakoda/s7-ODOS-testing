@@ -1,15 +1,15 @@
-@regression
+@regression @dossier
 Feature: Test Dossiers
 
   Background: User is on the home page
     When user enters the url
     Then user is navigated to the login page
 
-  Scenario Outline: Verify five random dossiers are displayed on the main page
+  Scenario Outline: Verify twenty random dossiers are displayed on the main page
     When user enters <username> and <password>
     And user clicks on sign in button from sign in page
     Then user is navigated to the home page
-    Then system should display five random dossiers
+    And system should display fifteen random dossiers
     Then system should display movie information for each dossier
 
     Examples: 
